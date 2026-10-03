@@ -1,0 +1,24 @@
+{
+  "name": "saucedemo-playwright-cucumber",
+  "version": "1.0.0",
+  "description": "Automatizacion E2E de Sauce Demo con Playwright, Cucumber (Gherkin) y Page Object Model",
+  "private": true,
+  "scripts": {
+    "install:browsers": "playwright install chromium",
+    "test": "cucumber-js",
+    "test:smoke": "cucumber-js --tags @smoke",
+    "test:login": "cucumber-js --tags @login",
+    "test:carrito": "cucumber-js --tags @carrito",
+    "test:checkout": "cucumber-js --tags @checkout",
+    "test:negativo": "cucumber-js --tags @negativo",
+    "test:headed": "cross-env HEADLESS=false cucumber-js"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.0.1",
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^20.14.0",
+    "cross-env": "^7.0.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.0"
+  }
+}
